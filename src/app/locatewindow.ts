@@ -77,7 +77,18 @@ export class WindowLocator {
         path = join(specialpath, 'PlayState.json');
       }
       path = join(
-        app.getPath('appData'),
+        app.getPath('home'),
+        '.local',
+        'share',
+        'Steam',
+        'steamapps',
+        'compatdata',
+        '1997040',
+        'pfx',
+        'drive_c',
+        'users',
+        'steamuser',
+        'AppData',
         'LocalLow',
         'Second Dinner',
         'SNAP',
@@ -195,8 +206,8 @@ export class WindowLocator {
             change?.Message?.GameResultAccountItems[0]?.IsWinner === true
               ? change?.Message?.GameResultAccountItems[0]?.AccountId
               : change?.Message?.GameResultAccountItems[1]?.IsWinner === true
-                ? change?.Message?.GameResultAccountItems[1]?.AccountId
-                : undefined;
+              ? change?.Message?.GameResultAccountItems[1]?.AccountId
+              : undefined;
           if (+change?.Message?.IsBattleMode) {
             gameState.updateBattleDeckStats(winner, cubes);
           } else {

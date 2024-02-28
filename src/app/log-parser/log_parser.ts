@@ -60,7 +60,18 @@ export class LogParser {
       return join(specialpath, fileToWatch);
     }
     return join(
-      app.getPath('appData'),
+      app.getPath('home'),
+      '.local',
+      'share',
+      'Steam',
+      'steamapps',
+      'compatdata',
+      '1997040',
+      'pfx',
+      'drive_c',
+      'users',
+      'steamuser',
+      'AppData',
       'LocalLow',
       'Second Dinner',
       'SNAP',
